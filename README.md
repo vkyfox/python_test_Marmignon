@@ -1,2 +1,4 @@
 # python_test_Marmignon
-Sort python script for an application for an internship at Marmignon Brothers
+Short python script for an application for an internship at Marmignon Brothers
+
+Variables for testing the functions are at the end of the file, they also have default values if needed.
