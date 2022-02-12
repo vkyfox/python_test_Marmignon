@@ -128,9 +128,9 @@ if __name__ == '__main__':
     print(f'The second-largest element in the list "{_var_exam5}" is "{exam5(_var_exam5)}"')
     print(f'The second-largest element in the list "{_var_exam5_2}" is "{exam5_2(_var_exam5_2)}"')
 
-    # Test efficiency of both methods for the 5th question
-    import timeit
-    print("Time taken with python's sort method (executed 10000 times):")
-    print(timeit.timeit("exam5([i for i in range(5555)][::-1])", number=10000, globals={'exam5': exam5}))
-    print('Time taken with a manual approach (executed 10000 times):')
-    print(timeit.timeit("exam5_2([i for i in range(5555)][::-1])", number=10000, globals={'exam5_2': exam5_2}))
+    # # Test efficiency of both methods for the 5th question
+    # import timeit
+    # print("Time taken with python's sort method (executed 10000 times):")
+    # print(timeit.timeit("exam5([i for i in range(5555)][::-1])", number=10000, globals={'exam5': exam5}))
+    # print('Time taken with a manual approach (executed 10000 times):')
+    # print(timeit.timeit("exam5_2([i for i in range(5555)][::-1])", number=10000, globals={'exam5_2': exam5_2}))
