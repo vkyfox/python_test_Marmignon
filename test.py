@@ -1,12 +1,9 @@
-# import timeit
 import math
 
 
 # Write a Python program to create a dictionary from a string and track the count of the letters from the string.
 # Sample string : “Marmignon”
 # Expected output: {'M': 1, 'a': 1, 'r': 1, 'm': 1, 'i': 1, 'g': 1, 'n': 2, 'o': 1}
-
-
 def exam1(string_to_count='Marmignon'):
     """
     Counts number of occurrences of every letter of a string.
@@ -79,7 +76,7 @@ def exam5(list_to_sort=[12, 322, 14323, 8766544, 77777]):
     return sorted_list[-2]
 
 
-# Theoretically more optimized, but less python-oriented alternative
+# Theoretically would have been more optimized, but less python-oriented alternative
 def exam5_2(list_to_sort=[12, 322, 14323, 8766544, 77777]):
     """
     Finds the second-largest element in a given list. Will raise IndexError if insufficient number of elements.
@@ -99,7 +96,7 @@ def exam5_2(list_to_sort=[12, 322, 14323, 8766544, 77777]):
 
 
 if __name__ == '__main__':
-
+    # Input for each question, modify at will.
     _var_exam1 = 'Marmignon'
     _var_exam2 = (111, 222)
     _var_exam3 = 12321
@@ -130,5 +127,10 @@ if __name__ == '__main__':
     print(f'"{_var_exam4}" is prime.' if exam4(_var_exam4) else f'"{_var_exam4}" is not prime.')
     print(f'The second-largest element in the list "{_var_exam5}" is "{exam5(_var_exam5)}"')
     print(f'The second-largest element in the list "{_var_exam5_2}" is "{exam5_2(_var_exam5_2)}"')
-    # print(timeit.timeit("exam5([i for i in range(5555)][::-1])", number=10000, globals={'exam5': exam5}))
-    # print(timeit.timeit("exam5_2([i for i in range(5555)][::-1])", number=10000, globals={'exam5_2': exam5_2}))
+
+    # Test efficiency of both methods for the 5th question
+    import timeit
+    print("Time taken with python's sort method (executed 10000 times):")
+    print(timeit.timeit("exam5([i for i in range(5555)][::-1])", number=10000, globals={'exam5': exam5}))
+    print('Time taken with a manual approach (executed 10000 times):')
+    print(timeit.timeit("exam5_2([i for i in range(5555)][::-1])", number=10000, globals={'exam5_2': exam5_2}))
